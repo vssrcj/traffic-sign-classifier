@@ -1,37 +1,55 @@
 ## Project: Build a Traffic Sign Recognition Program
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-Overview
+*made by CJ*
+
 ---
-In this project, you will use what you've learned about deep neural networks and convolutional neural networks to classify traffic signs. You will train and validate a model so it can classify traffic sign images using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). After the model is trained, you will then try out your model on images of German traffic signs that you find on the web.
+The goal of this project is to identify German traffic signs using Google's Tensforflow
 
-We have included an Ipython notebook that contains further instructions 
-and starter code. Be sure to download the [Ipython notebook](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb). 
+*Link to the project code [here](/Traffic_Sign_Classifier.ipynb)*
 
-We also want you to create a detailed writeup of the project. Check out the [writeup template](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/writeup_template.md) for this project and use it as a starting point for creating your own writeup. The writeup can be either a markdown file or a pdf document.
-
-To meet specifications, the project will require submitting three files: 
-* the Ipython notebook with the code
-* the code exported as an html file
-* a writeup report either as a markdown or pdf file 
-
-Creating a Great Writeup
 ---
-A great writeup should include the [rubric points](https://review.udacity.com/#!/rubrics/481/view) as well as your description of how you addressed each point.  You should include a detailed description of the code used in each step (with line-number references and code snippets where necessary), and links to other supporting documents or external references.  You should include images in your writeup to demonstrate how your code works with examples.  
 
-All that said, please be concise!  We're not looking for you to write a book here, just a brief description of how you passed each rubric point, and references to the relevant code :). 
+## Dataset Exploration
+#### Dataset Summary
 
-You're not required to use markdown for your writeup.  If you use another method please just submit a pdf of your writeup.
+* Number of training examples = **34799**
+* Number of testing examples = **12630**
+* Image data shape = **(32, 32, 3)**
+* Number of classes = **43**
 
-The Project
----
-The goals / steps of this project are the following:
-* Load the data set
-* Explore, summarize and visualize the data set
-* Design, train and test a model architecture
-* Use the model to make predictions on new images
-* Analyze the softmax probabilities of the new images
-* Summarize the results with a written report
+#### Exploratory Visualization
+
+##### The following are examples of 5 sign types:
+
+* Speed limit (60km/h)   **1260 samples**
+<img src="plots/sample_1.png" height="100" />
+
+* End of no passing by vehicles over 3.5 metric tons   **210 samples**
+<img src="plots/sample_2.png" height="100" />
+
+* Speed limit (120km/h)   **1260 samples**
+<img src="plots/sample_3.png" height="100" />
+
+* Speed limit (20km/h)   **180 samples**
+<img src="plots/sample_4.png" height="100" />
+
+* End of no passing   **210 samples)**
+<img src="plots/sample_5.png" height="100" />
+
+##### The following shows the number of signs per types:
+Note that the categories aren't even.  Additional data will be added from the existing set, and augmented,
+to equalize the categories a bit.
+
+<img src="plots/signs_per_type_init.png" height="300" />
+
+## Design and Test a Model Architecture
+#### Preprocessing
+
+You pre-process all images in the architecture.
+Only the additional images will be augmented.
+
+<img src="plots/processed_images.png" height="140" />
 
 ### Dependencies
 This lab requires:
