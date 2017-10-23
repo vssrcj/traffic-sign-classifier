@@ -41,7 +41,7 @@ The goal of this project is to identify German traffic signs using Google's Tens
 *Note that the amount of images per class aren't remotely even.  The lacking classes will be padded with augmented images from the existing set.*
 
 <div>
-  <img src="images/signs_per_type.png" height="300" />
+  <img src="images/signs_per_type.png" height="500" />
 </div>
 
 ## Design and Test a Model Architecture
@@ -61,7 +61,7 @@ This is the result of the transformations:
  
 This is the result of the training set after padding and augmentation:
 <div>
-  <img src="images/signs_per_type_augmented.png" height="300" />
+  <img src="images/signs_per_type_augmented.png" height="500" />
 </div>
 
 #### Model Architecture
@@ -88,18 +88,22 @@ The batch size is set to 160.
 The epochs is set to 32.  Too much overfitting followed if this epoch was set higher.
 
 This is the result of the learning process:
-<img src="images/learning.png" height="300" />
+<div>
+  <img src="images/learning.png" height="360" />
+</div>
 
 #### Solution Approach
-First, I used the standard LeNet implementation, and obtained a validation set accuracy of about 0.8.
-I added dropout filters, as well as an additional layer to Lenet, to boost the accuracy to 0.85.
-I then pre-processed the images, and boosted the accuracy to about 0.9.
-I padded image classes with small amounts of training data with augmented images, and boosted the accuracy to 0.93.
-I lowered the learning rate to get the accuracy up to its final total of 0.96.
+- First, I used the standard LeNet implementation, and obtained a validation set accuracy of about 0.8.
+- I added dropout filters, as well as an additional layer to Lenet, to boost the accuracy to 0.85.
+- I then pre-processed the images, and boosted the accuracy to about 0.9.
+- I padded image classes with small amounts of training data with augmented images, and boosted the accuracy to 0.93.
+- I lowered the learning rate to get the accuracy up to its final total of 0.96.
 
 ## Test a Model on New Images
 ### Acquiring New Images
-<img src="images/test_images.png" height="200" />
+<div>
+  <img src="images/test_images.png" height="120" />
+</div>
 
 ### Performance on New Images
 Name|Sign|Prediction|Success
