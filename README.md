@@ -40,7 +40,9 @@ The goal of this project is to identify German traffic signs using Google's Tens
 ##### The following shows the number of signs per class:
 *Note that the amount of images per class aren't remotely even.  The lacking classes will be padded with augmented images from the existing set.*
 
-<img src="images/signs_per_type_init.png" height="300" />
+<div>
+  <img src="images/signs_per_type.png" height="300" />
+</div>
 
 ## Design and Test a Model Architecture
 #### Preprocessing
@@ -51,7 +53,16 @@ All the images in the project will be pre-processed.  It includes:
 
 The "padded" images will be augmented.  They will be rotated, moved, and warped to provide an additional image for the training set.
 
-<img src="images/transformation.png" height="140" />
+This is the result of the transformations:
+
+<div>
+  <img src="images/transformation.png" height="140" />
+</div>
+ 
+This is the result of the training set after padding and augmentation:
+<div>
+  <img src="images/signs_per_type_augmented.png" height="300" />
+</div>
 
 #### Model Architecture
 LeNet was used, because I have experience with it, and it is proven to be efficient.
